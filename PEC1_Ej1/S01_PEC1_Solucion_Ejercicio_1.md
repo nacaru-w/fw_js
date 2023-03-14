@@ -53,9 +53,8 @@ __Cita al menos 4 de las características principales de `TypeScript` (important
 __El lenguaje CSS es muy rígido, poco práctico y ordenado a la hora de programar. Para evitar este problema se han creado los preprocesadores `CSS`, que ofrecen evidentes ventajas.__
 
 * __Cita al menos 2 de estos preprocesadores__.
-Dos de los preprocesadores CSS más utilizados y reconocidos pueden ser:
-* [Sass](https://sass-lang.com/).
-* [Less](https://lesscss.org/).
+
+Dos de los preprocesadores CSS más utilizados y reconocidos pueden ser [Sass](https://sass-lang.com/) y [Less](https://lesscss.org/).
 
 * __Cita al menos 4 ventajas que ofrecen estos preprocesadores__
 
@@ -102,14 +101,29 @@ Adicionalmente, los preprocesadores CSS permiten mantener el código a largo pla
 
 
 * __Explica brevemente en qué consisten los sourcemaps__
+
 Un sourcemap se usa en el contexto de utilización de aplicaciones que realicen una transformación de nuestro código. Cuando esto ocurre, es difícil realizar debugging para saber cómo funciona. Los sourcemaps permiten establecer un vínculo entre el origen del código y su expresión en el código ya transformado. Por ejemplo, al utilizar el module bundler Webpack, el código final generado dista mucho del original en cuanto a que ha realizado una serie de aplicaciones sobre este. Sin embargo, Webpack ofrece archivos de sourcemap de forma que este código pueda identificarse en caso de necesitar debugging. 
 
 * __Explica qué es un transpilador__
-Un transpilador es un programa que toma como origen código escrito en un lenguaje y realiza modificaciones sobre este o lo traduce a un lenguaje distinto, siempre dentro de lenguajes que operen en el mismo nivel de abstracción aproximado. 
+
+Un transpilador es un programa que toma como origen código escrito en un lenguaje y realiza modificaciones sobre este o lo traduce a un lenguaje distinto, siempre dentro de lenguajes que operen en el mismo nivel de abstracción aproximado.
+
 ## 3
 
 __El flujo de trabajo profesional en front-end hace indispensable el uso de herramientas como controles de versiones y herramientas de gestión de módulos__
 
 * __Cita al menos dos sistemas de control de versiones y dos herramientas de gestión de módulos__
+
+Entre los sistemas de control de versiones podemos mencionar Git y Mercurial como dos ejemplos.
+
+Dos herramientas de gestión de módulos serían Parcel y Webpack.
+
 * __Cita y explica al menos 3 comandos de `Git`__
+
+`git add` añade los últimos cambios realizados a la fase _staged_.
+`git commit` guarda los cambios en tu repositorio local, incluyendo una breve descripción de los cambios que se han hecho.
+`git push` sube los cambios realizados en el repositorio local al repositorio remoto.
+
 * __Cita y explica brevemente las características más definitorias de `WebPack`.__
+
+Webpack es un _module bundler_ que permite organizar tu proyecto en módulos. Webpack toma los módulos con dependencias y genera _assets_ estáticos con la información que se encuentra en esos módulos. 
