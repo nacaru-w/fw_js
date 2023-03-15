@@ -58,18 +58,18 @@ body {
     border-color: var(--success-color);
 }
 
-.form-control.error input {
+.form_control.error input {
     border-color: var(--error-color);
 }
 
-.form-control.error small {
+.form_control.error small {
     visibility: visible;
 }
 
 .form_control small {
     color: var(--error-color);
     position: absolute;
-    bottom: 0;
+    bottom: -1.35em;
     left: 0;
     visibility: hidden;
 }
