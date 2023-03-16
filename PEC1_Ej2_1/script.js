@@ -57,10 +57,51 @@ function checkLength(input, min, max) {
     }
 }
 
+//Check whether the age is correct
+function checkAge(input) {
+    if (+input.value < 0) {
+        showError(input, "Age cannot be negative")
+    } else if (+input.value > 1000) {
+        showError(input, "Age cannot be above 1000 years")
+    }
+}
+
 // Check if passwords match
 function checkPasswords(input1, input2) {
     if (input1.value !== input2.value) {
         showError(input2, `Passwords do not match`)
+    }
+}
+
+// Check if password has all the letters/numbers/special chars it must have
+
+function isPasswordCorrect(input) {
+    // Check if the password contains at least one uppercase letter
+    if (!/[A-Z]/.test(input)) {
+        isMissing = 'one uppercase letter'
+        return isMissing;
+    }
+
+    // Check if the password contains at least one number
+    if (!/\d/.test(input)) {
+        isMissing = 'one number'
+        return isMissing;
+    }
+
+    // Check if the password contains at least one special character
+    if (!/[~!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(input)) {
+        isMissing = 'a special character'
+        return isMissing;
+    }
+
+    // If all conditions are met, return true
+    return true;
+}
+
+function checkPassword(input) {
+    validationResult = isPasswordCorrect(input.value)
+    if (typeof validationResult === 'string') {
+        showError(input, `Must have at least ${validationResult}`)
     }
 }
 
@@ -72,9 +113,11 @@ function capitalize(word) {
 // Event listeners
 form.addEventListener('submit', function (e) {
     e.preventDefault()
-    checkRequired([username, email, password, password2])
+    checkRequired([username, age, email, password, password2])
     checkLength(username, 3, 15);
-    checkLength(password, 6, 25);
+    checkLength(password, 8, 25);
+    checkAge(age)
     checkEmail(email);
+    checkPassword(password);
     checkPasswords(password, password2);
 })
