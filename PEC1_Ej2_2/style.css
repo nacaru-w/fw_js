@@ -80,3 +80,31 @@ input:focus,
 button:focus {
     outline: 0;
 }
+
+.loadersmall {
+    border: 5px solid #f3f3f3;
+    border-top-color: rgb(243, 243, 243);
+    border-top-style: solid;
+    border-top-width: 5px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-top: 5px solid #555;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    visibility: hidden;
+}
+
+.loadersmall.loading {
+    visibility: visible;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

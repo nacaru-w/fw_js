@@ -4,9 +4,11 @@ const amountEl_one = document.getElementById("amount-one");
 const amountEl_two = document.getElementById("amount-two");
 const rateEl = document.getElementById("rate");
 const swap = document.getElementById("swap");
+const loader = document.getElementById("loader")
 
 // Fetch exchange rates and update the DOM
 function calculate() {
+    loader.className = 'loadersmall loading'
     let currency_one = currencyEl_one.value;
     let currency_two = currencyEl_two.value;
 
@@ -16,6 +18,7 @@ function calculate() {
             let rate = data.conversion_rates[currency_two]
             rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`
             amountEl_two.value = (amountEl_one.value * rate).toFixed(2)
+            loader.className = 'loadersmall'
         })
 }
 
