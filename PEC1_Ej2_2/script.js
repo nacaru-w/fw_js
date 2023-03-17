@@ -15,6 +15,10 @@ function calculate() {
     fetch(`https://v6.exchangerate-api.com/v6/370d55c233982cc0f62a011c/latest/${currency_one}`)
         .then(res => res.json())
         .then(data => {
+            if (data.result == 'error') {
+                console.log(data)
+                alert(`Error: ${data["error-type"]}`);
+            }
             let rate = data.conversion_rates[currency_two]
             rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`
             amountEl_two.value = (amountEl_one.value * rate).toFixed(2)
