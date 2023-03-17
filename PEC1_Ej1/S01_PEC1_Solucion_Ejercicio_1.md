@@ -133,3 +133,5 @@ Webpack es un _module bundler_ que permite organizar tu proyecto en módulos. We
 * Se ha añadido el atributo `async` al elemento `script` de forma que este no bloquee la carga de los elementos HTML y «haga esperar» al usuario que carga la página. Esto se ha hecho teniendo en cuenta que los scripts utilizados no son de gran envergadura y que no va a afectar a la funcionalidad global de la página.
 
 * En la función `isValidEmail(email)` que analiza si el e-mail es válido, se ha preferido utilizar el método [`match()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) para comprobar si las condiciones impuestas por la expresión regular se cumplen. Además, se ha sustituido la expresión regular propuesta por una menos restrictiva.
+
+* Al crear la función que devuelve una palabra con la primera letra en mayúscula, se ha preferido utilizar una función de uso global, en lugar de una específica para las strings de tipo `input.id` y pasar este tipo de strings con el método como argumento.
