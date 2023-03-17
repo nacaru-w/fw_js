@@ -12,6 +12,10 @@ function calculate() {
     let currency_one = currencyEl_one.value;
     let currency_two = currencyEl_two.value;
 
+    if (amountEl_one.value < 0) {
+        amountEl_one.value = 0;
+    };
+
     fetch(`https://v6.exchangerate-api.com/v6/370d55c233982cc0f62a011c/latest/${currency_one}`)
         .then(res => res.json())
         .then(data => {
