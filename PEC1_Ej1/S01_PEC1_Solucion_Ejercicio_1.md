@@ -160,3 +160,5 @@ function calculate() {
         })
 }
 ```
+
+* Se ha añadido un mensaje de error. Se puede comprobar cambiando la moneda a «ERROR».
