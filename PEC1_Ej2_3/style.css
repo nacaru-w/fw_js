@@ -16,6 +16,20 @@ body {
     margin: 0;
 }
 
+.currency-container {
+    margin: 20px 0;
+}
+
+.currency-container select {
+    background-color: whitesmoke;
+    border: 0;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-left: 0.4em;
+    padding: 0.35em 0.65em;
+    appearance: none;
+}
+
 .movie-container {
     margin: 20px 0;
 }
@@ -107,4 +121,8 @@ body {
 
 p.text span {
     color: #6feaf6;
+}
+
+#totalcurrency {
+    color: unset;
 }

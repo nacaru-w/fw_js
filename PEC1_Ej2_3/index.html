@@ -11,13 +11,22 @@
 </head>
 
 <body>
+    <div class="currency-container">
+        <label>Select your currency</label>
+        <select id="currency">
+            <option value="EUR" selected>EUR</option>
+            <option value="USD">USD</option>
+            <option value="JPY">JPY</option>
+            <option value="GBP">GBP</option>
+        </select>
+    </div>
     <div class="movie-container">
         <label>Select a movie:</label>
         <select id="movie">
-            <option value="9">American Beauty (9€)</option>
-            <option value="10">Wall·E (10€)</option>
-            <option value="7">Lilja 4-ever (7€)</option>
-            <option value="12">Gravity (12€)</option>
+            <option value="9">American Beauty</option>
+            <option value="10">Wall·E</option>
+            <option value="7">Lilja 4-ever</option>
+            <option value="12">Gravity</option>
         </select>
     </div>
 
@@ -100,7 +109,9 @@
         </div>
     </div>
 
-    <p class="text">You have selected <span id="count">0</span> seats for a price of <span id="total">0</span> €</p>
+    <p class="text">You have selected <span id="count">0</span> seats for a price of <span id="total">0</span> <span
+            id="totalcurrency"></span>
+    </p>
 
 </body>
 
